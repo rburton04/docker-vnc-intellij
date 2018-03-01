@@ -13,7 +13,7 @@ RUN apt-get update && \
 #
 # From tarball
 WORKDIR /tmp
-RUN wget -q 'https://download.jetbrains.com/idea/ideaIC-2017.1.4.tar.gz' && \
+RUN wget -q 'https://download.jetbrains.com/idea/ideaIC-2017.3.4.tar.gz' && \
     tar xzf ideaIC-2017.1.4.tar.gz && rm ideaIC-2017.3.4.tar.gz && \
     mv idea-* /opt/idea && \
     ln -s /opt/idea/bin/idea.sh /usr/local/bin/idea.sh
