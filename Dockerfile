@@ -5,7 +5,7 @@ MAINTAINER Murphy McMahon <pandeiro.docker@gmail.com>
 # System tools
 #
 RUN apt-get update && \
-    apt-get install -y wget software-properties-common openjdk-7-jdk && \
+    apt-get install -y wget software-properties-common openjdk-8-jdk && \
     rm -rf /var/lib/apt/lists/*
 
 #
@@ -14,7 +14,7 @@ RUN apt-get update && \
 # From tarball
 WORKDIR /tmp
 RUN wget -q 'https://download.jetbrains.com/idea/ideaIC-2017.1.4.tar.gz' && \
-    tar xzf ideaIC-2017.1.4.tar.gz && rm ideaIC-2017.1.4.tar.gz && \
+    tar xzf ideaIC-2017.1.4.tar.gz && rm ideaIC-2017.3.4.tar.gz && \
     mv idea-* /opt/idea && \
     ln -s /opt/idea/bin/idea.sh /usr/local/bin/idea.sh
 
